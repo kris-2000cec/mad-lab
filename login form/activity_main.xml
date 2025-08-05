@@ -4,81 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8F8"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:background="#0C30E6"
+            android:padding="16dp"
+            android:text="LOGIN FORM"
+            android:textAlignment="viewStart"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
     <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="activitylifecycle34 "
-        android:textAlignment="center"
-        android:textSize="50dp"
-        android:layout_marginTop="50dp"
-        android:id="@+id/activityLifecycleText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:text="Email Address"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/uname"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-    <Button
-        android:id="@+id/onCreateButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="onCreate"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/activityLifecycleText"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/onStartButton"
-        android:layout_width="0dp"
+        android:id="@+id/lbtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="onStart"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/onCreateButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-    <Button
-        android:id="@+id/onPauseButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="onPause"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/onStartButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        android:text="Login"
+        android:textSize="20dp"
 
-    <Button
-    android:id="@+id/onStopButton"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:text="onStop"
-    android:layout_marginTop="10dp"
-    app:layout_constraintTop_toBottomOf="@id/onPauseButton"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    />
-
-    <Button
-        android:id="@+id/onRestartButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="onRestart"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/onStopButton"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <Button
-        android:id="@+id/onDestroyButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="onDestroy"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/onRestartButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/pwd"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter password"
+        android:inputType="textPassword"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/lbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter email"
+        android:inputType="text"
+        android:textSize="20dp"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="102dp"
+        android:layout_height="32dp"
+        android:text="Password"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uname"
+        app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
